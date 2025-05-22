@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #f0f8ff;
+                font-family: Arial, sans-serif;
+                color: #333;
+                padding: 20px;
+            }
+            header {
+                text-align: center;
+                font-size: 2em;
+                font-weight: bold;
+                color: #4a90e2;
+                margin-bottom: 20px;
+            }
+            label {
+                font-weight: bold;
+                margin-top: 10px;
+                display: inline-block;
+                width: 150px;
+            }
+            input[type="text"], input[type="number"] {
+                padding: 5px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 200px;
+            }
+            button {
+                background-color: #4a90e2;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 1em;
+                margin-top: 10px;
+            }
+            button:hover {
+                background-color: #357abd;
+            }
+            #avg {
+                margin-top: 20px;
+                font-size: 1.2em;
+                color: #2c3e50;
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            function a()
+            {
+                let x = document.getElementById("stn").value;
+                let a = parseInt(document.getElementById("s1").value);
+                let b = parseInt(document.getElementById("s2").value);
+                let c = parseInt(document.getElementById("s3").value);
+                let d = parseInt(document.getElementById("s4").value);
+                let e = parseInt(document.getElementById("s5").value);
+                let av=(a+b+c+d+e)/5;
+                document.getElementById("avg").innerHTML="Student name: "+x+" | Average: "+av;
+            }
+        </script>
+    </head>
+    <body>
+        <header>Percentage Calculator</header>
+        <label for="stn">Student Name :</label><input type="text" id="stn"><br>
+        <label for="s1">Subject 1 Marks :</label><input type="number" id="s1"><br>
+        <label for="s2">Subject 2 Marks :</label><input type="number" id="s2"><br>
+        <label for="s3">Subject 3 Marks :</label><input type="number" id="s3"><br>
+        <label for="s4">Subject 4 Marks :</label><input type="number" id="s4"><br>
+        <label for="s5">Subject 5 Marks :</label><input type="number" id="s5"><br>
+        <button onclick="a()">Average is</button>
+        <p id="avg"></p>
+    </body>
+</html>
